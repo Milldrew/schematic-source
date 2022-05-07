@@ -1,3 +1,4 @@
+import { DarkThemeService } from '../services/dark-theme.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./theme-toggle.component.scss'],
 })
 export class ThemeToggleComponent implements OnInit {
-  constructor() {}
-  isDark = false;
+  constructor(public readonly themeService: DarkThemeService) {}
+  isLight = false;
   ngOnInit(): void {}
   ngAfterContentChecked() {}
-  changeTheme(event: any) {
-    event.stopPropagation();
-    console.log(this.isDark);
+  changeTheme() {
+    console.log(this.isLight);
+    this.themeService.setIsDark(this.isLight);
   }
 }

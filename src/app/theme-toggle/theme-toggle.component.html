@@ -1,8 +1,10 @@
+<label class="label">Change Theme</label>
 <label class="switch">
   <input
-    (click)="changeTheme($event)"
+    (click)="changeTheme()"
     name="isDark"
-    [(ngModel)]="isDark"
+    [checked]="isLight"
+    [(ngModel)]="isLight"
     type="checkbox"
   />
   <span class="slider round"></span>
