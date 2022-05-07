@@ -9,3 +9,8 @@ $light: #eee;
 $primary: #aaffaa;
 $secondary: #aaaaff;
 $neon: #66ff66;
+
+@mixin theme($backgroundColor: $lighter, $textColor: #000) {
+  background-color: $backgroundColor;
+  color: $textColor;
+}

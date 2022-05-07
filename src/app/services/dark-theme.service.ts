@@ -5,5 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class DarkThemeService {
   isDark = false;
+
+  getIsDark() {
+    return this.isDark;
+  }
+  setIsDark(isLight: boolean) {
+    this.isDark = !isLight;
+  }
   constructor() {}
 }

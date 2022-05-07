@@ -4,4 +4,17 @@
   height: 100%;
   width: 100%;
   background-color: $lighter;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  width: 80%;
+  height: 80%;
+}
+:host(.light) {
+  @include theme($lighter, black);
+}
+:host(.dark) {
+  @include theme($dark, $lighter);
 }
